@@ -2,8 +2,7 @@ import React from 'react'
 
 const HomeHeroBottomText = () => {
   return (
-
-        <h1 className='leading-0'>VMGRAPHICSTUDIO</h1>
+        <h1 className='leading-tight'>VMGRAPHICSTUDIO</h1>
         )
 }
 

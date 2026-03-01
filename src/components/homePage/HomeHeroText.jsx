@@ -3,11 +3,11 @@ import Video from "./Video";
 
 const HomeHeroText = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="pt-5 text-center">
       <div>L'étincelle</div>
-      <div className="flex w-[50vw] items-center justify-center">
+      <div className="flex items-center justify-center">
         qui
-        <div className="h-[10vh] rounded-full overflow-hidden ">
+        <div className="w-[9vw] h-[10vh] overflow- rounded-full">
           <Video />
         </div>
         génère
