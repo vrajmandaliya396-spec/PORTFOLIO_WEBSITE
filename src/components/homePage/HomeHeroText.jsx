@@ -1,9 +1,8 @@
 import React from "react";
-import Video from "./Video";
 
 const HomeHeroText = () => {
   return (
-    <div className="pt-5 text-left ">
+    <div className="pt-5 text-left text-[10rem]">
       <div>L'étincelle</div>
       <div className="flex items-center ">
         qui
