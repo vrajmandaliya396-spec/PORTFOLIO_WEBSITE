@@ -3,6 +3,9 @@
     padding: 0px;
     margin: 0px;
 }
+
+
+
 @font-face {
     font-family: font1;
     src: url(./fonts/Lausanne-300.woff2);
@@ -13,5 +16,6 @@
 }
 body{
     background-color: rgb(0, 0, 0);
-    pointer-events: none;
+
 }
+
