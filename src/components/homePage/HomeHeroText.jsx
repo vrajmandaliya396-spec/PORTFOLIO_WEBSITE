@@ -3,7 +3,7 @@ import React from "react";
 const HomeHeroText = () => {
   return (
     <>
-        <img src="src\assets\logo.png" className="relative h-[3rem] w-[10.5rem] top-6 left-6 mx-auto" alt="" />   
+        <img src="src\assets\logo.png" className="relative h-12 w-42 top-6 left-6 mx-auto" alt="" />   
 
     <div className="m-5 relative text-center text-[7rem] flex flex-col gap-5">
      <div className="mt-20 text-center">L'étincelle</div>
