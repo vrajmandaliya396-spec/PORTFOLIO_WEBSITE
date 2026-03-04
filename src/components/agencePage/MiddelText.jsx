@@ -6,25 +6,42 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const MiddelText = () => {
 
+  const ImgAarray = [
+    "src/assets/img.png",
+    "src/assets/img2.png",
+    "src/assets/img3.png",
+  ]
+
   const ImgDivRef = useRef(null);
+  const ImgRef = useRef(null);
 
   useGSAP(() => {
     
-     
-
     gsap.registerPlugin(ScrollTrigger)
 
     gsap.to(ImgDivRef.current, {
 
       x:500,
       y:-100,
-    scrollTrigger: {
+      scrollTrigger: {
       trigger: ImgDivRef.current,
-      markers: true,
+      // markers: true,
       start:'top 17.5%',
       end:'top -50%',
       pin:true,
-      scrub:true
+      scrub:true,
+        onUpdate:(elem)=>{
+        let ImgIndex 
+        if(elem.progress>3){
+          ImgIndex = Math.round(elem.progress-1)
+        }else{
+          ImgIndex = Math.round(elem.progress*2)
+        }
+        console.log(ImgIndex);
+        ImgRef.current.src = ImgAarray[ImgIndex]
+
+      }
+
     }
   })
   })
@@ -34,8 +51,8 @@ const MiddelText = () => {
     <>
     <div className='text-black font-[font1]  h-screen z-1 w-screen text-2xl text-center justify-center text-[32vh] flex-nowrap bg-white items-center flex'>
       <div ref={ImgDivRef} className='bg-black rounded-4xl absolute left-56 top-32 flex '>
-                <MiddelImg/>
-    </div>
+        <img ref={ImgRef} className="h-85 z-0 w-60 flex top-10" src="src/assets/img.png" alt="" />
+      </div>
     <div className='z-50'>
       Vraj
     </div>
