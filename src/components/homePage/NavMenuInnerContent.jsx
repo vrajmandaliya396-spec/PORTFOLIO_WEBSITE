@@ -53,19 +53,39 @@ const NavMenuInnerContent = () => {
 
   return (
     <>
+      <img
+        src="src\assets\logo.png"
+        className="absolute z-9999 h-12 w-42 top-6 left-6 mx-auto"
+        alt=""
+      />
+        <div className="absolute z-1002 right-0 ">
+
+        <svg 
+        width="100"
+        height="100"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="cursor-pointer"
+      >
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+
+
+        </div>
+      
       {/* ================= FULL SCREEN MENU ================= */}
       <div className="absolute items-center justify-center inset-0 flex flex-col uppercase text-8xl text-white  bg-black z-[1000]">
-
         {/* ============ PROJECT ============ */}
         <div
           onMouseEnter={() => handleMouseEnter(projectRef)}
           onMouseLeave={() => handleMouseLeave(projectRef)}
           className="relative w-full py-12 border-t-2  border-white/30 flex justify-center overflow-hidden cursor-pointer"
         >
-            <div className=" h-full w-full absolute py-12 opacity-0 flex justify-center bg-amber-200 overflow-hidden">
-                this is project     
-            </div>
-
           {/* Base Text */}
           <span className="relative z-10">Project</span>
 

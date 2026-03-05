@@ -3,11 +3,13 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import Loader from './components/common/IntroAnimation.jsx'
+import BottomCopyRight from '../src/components/common/BottomCopyRight.jsx'
 
 createRoot(document.getElementById('root')).render(
   
     <BrowserRouter>
     <Loader>
+    <BottomCopyRight/>
     <App />
     </Loader>
     </BrowserRouter>

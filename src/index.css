@@ -1,20 +1,38 @@
 @import "tailwindcss";
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+  padding: 0px;
+  margin: 0px;
 }
 
+.merq-container {
+  opacity: 0;
+}
+.merq-container:hover {
+  transition: all ease-in-out 0.3s;
+  opacity: 1;
+}
 
+.merq-container{
+    animation: merquery;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes merquery {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
 
 @font-face {
-    font-family: font1;
-    src: url(./fonts/Lausanne-300.woff2);
+  font-family: font1;
+  src: url(./fonts/Lausanne-300.woff2);
 }
 @font-face {
-    font-family: font2;
-    src: url(./fonts/Lausanne-500.woff2)
+  font-family: font2;
+  src: url(./fonts/Lausanne-500.woff2);
 }
-
-
-
-
