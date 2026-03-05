@@ -29,6 +29,7 @@ const Loader = (props) => {
     .set(".loader", {
       display: "none"   // 👈 removes it visually
     });
+    
 
   }, []);
 
