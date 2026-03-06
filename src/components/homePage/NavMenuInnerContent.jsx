@@ -39,7 +39,10 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
   const handleMouseEnter = (ref) => {
     gsap.to(ref.current, {
       y: 0,
-      duration: 0.4,
+      stagger:{
+        amount:0.3
+      },
+      duration: 0.1,
       ease: "power2.out",
       force3D: true,
     });
@@ -48,7 +51,7 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
   const handleMouseLeave = (ref) => {
     gsap.to(ref.current, {
       y: "-100%",
-      duration: 0.4,
+      duration: 0.2,
       ease: "power2.in",
       force3D: true,
     });

@@ -36,3 +36,19 @@
   font-family: font2;
   src: url(./fonts/Lausanne-500.woff2);
 }
+
+.project1 {
+  margin: 10px;
+    margin-right:5px;
+
+}
+
+
+.project2 {
+  margin: 10px;
+  margin-left: 5px;
+}
+
+.projectsTitle{
+  margin-top: 250px;
+}

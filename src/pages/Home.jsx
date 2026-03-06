@@ -3,15 +3,24 @@ import HomeHeroText from "../components/homePage/HomeHeroText";
 import HomeHeroBottomText from "../components/homePage/HomeHeroBottomText";
 import NavMenu from "../components/homePage/NavMenu";
 import NavMenuInnerContent from "../components/homePage/NavMenuInnerContent";
+import { useState } from "react";
+import NavMenuBlackTheem from "../components/projectsPage/NavMenuBlackTheem";
 
-const Home = ({setMenuOpen}) => {
+const Home = () => {
+
+      const [menuOpen, setMenuOpen] = useState(false)
+
+
   return (
     <>
       <div className="overflow-hidden">
-        <NavMenuInnerContent></NavMenuInnerContent>
+      <NavMenuInnerContent menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>    
       </div>
-      <div>
+      <div >
         <NavMenu setMenuOpen={setMenuOpen}  ></NavMenu>
+      </div>
+      <div className="hidden">
+        <NavMenuBlackTheem setMenuOpen={setMenuOpen}  ></NavMenuBlackTheem>
       </div>
       <div className="text-white fixed h-full w-full flex">
         <Video />
