@@ -5,6 +5,7 @@ import ImgCard from "../components/projectsPage/ImgCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,8 +17,8 @@ const Projects = () => {
     },
 
     {
-      img1: "src/assets/pro3.jpg",
-      img2: "src/assets/pro4.jpg",
+      img1: "src/assets/pro3.png",
+      img2: "src/assets/pro4.png",
     },
 
     {
@@ -83,6 +84,10 @@ const Projects = () => {
         {imgArray.map((elem, idx) => {
           return (
             <div
+              onClick={(e)=>{
+                console.log(e.target.src);
+                window.open(e.target.src, "_blank");
+            }}  
               key={idx}
               className=" hero will-change-[height] flex project1 flex-1"
             >

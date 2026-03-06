@@ -12,20 +12,19 @@
   opacity: 1;
 }
 
-.merq-container{
-    animation: merquery;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+.merq-container {
+  animation: merquery;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 @keyframes merquery {
-    from{
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(-100%);
-    }
-    
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 @font-face {
@@ -39,20 +38,26 @@
 
 .project1 {
   margin: 10px;
-    margin-right:5px;
+  margin-right: 5px;
 
 }
-
 
 .project2 {
   margin: 10px;
   margin-left: 5px;
 }
 
-.projectsTitle{
+.projectsTitle {
   margin-top: 250px;
 }
 
-.hero{
-will-change: height;
+.hero {
+  will-change: height;
+}
+
+.project1 img {
+  transition: all ease-in 250ms;
+}
+.project2 img {
+  transition: all ease-in 250ms;
 }
