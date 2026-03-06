@@ -52,3 +52,7 @@
 .projectsTitle{
   margin-top: 250px;
 }
+
+.hero{
+will-change: height;
+}

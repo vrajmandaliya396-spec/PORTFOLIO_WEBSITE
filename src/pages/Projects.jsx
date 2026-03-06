@@ -22,26 +22,40 @@ const Projects = () => {
 
     {
       img1: "src/assets/pro5.png",
-      img2: "src/assets/pro6.jpg",
+      img2: "src/assets/pro6.png",
     },
   ];
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     gsap.from(".hero", {
-      height:0,
-      stagger:{
-        amount:0.5
-      },
-      scrollTrigger:{
-        trigger:'lol',
-        markers: true,
-        start:'center 5%',
-        end:'top -150%',
-        scrub:true,
+      height: 0,
 
-      }
+      stagger: {
+        amount: 0.5,
+      },
+      scrollTrigger: {
+        trigger: ".lol",
+        start: "top 50%",
+        end: "top -150%",
+        scrub: 1,
+      },
     });
-  });
+
+    gsap.from(".hero", {
+      y: 200,
+      opacity: 0,
+      scale: 0.9,
+      duration: 1.2,
+      stagger: 0.25,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: ".lol",
+        start: "top 80%",
+        end: "top 30%",
+        scrub: 1,
+      },
+    });
+  }, []);
 
   return (
     <>
@@ -61,14 +75,17 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className=" projectsTitle relative left-6 w-1/2 flex">
+      <div className=" projectsTitle  relative left-6 w-1/2 flex">
         <h1 className=" font-[font2] text-9xl uppercase">Projects </h1>{" "}
         <p>@VM-2.0</p>
       </div>
-      <div className="lol">
-        {imgArray.map((elem) => {
+      <div className="lol ">
+        {imgArray.map((elem, idx) => {
           return (
-            <div className=" hero project1 flex-1">
+            <div
+              key={idx}
+              className=" hero will-change-[height] flex project1 flex-1"
+            >
               <ImgCard img1={elem.img1} img2={elem.img2} />
             </div>
           );
