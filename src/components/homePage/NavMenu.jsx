@@ -2,13 +2,16 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const NavMenu = () => {
+const NavMenu = ({setMenuOpen}) => {
+
+      console.log(setMenuOpen);
+
+
   const whiteDiv = useRef(null);
   const line1 = useRef(null);
   const linerast2 = useRef(null);
   const line3 = useRef(null);
 
-  let menuOpen = false;
 
   useGSAP(() => {
     // Hide lime div initially (no flicker)
@@ -32,51 +35,27 @@ const NavMenu = () => {
       force3D: true
     });
   };
+  
 
-  const toggleMenu = () => {
-    if (!menuOpen) {
-      gsap.to(line1.current, {
-        y: 6,
-        rotate: 45,
-        transformOrigin: "center",
-        duration: 0.3
-      });
-
-      gsap.to(linerast2.current, {
-        opacity: 0,
-        duration: 0.2
-      });
-
-      gsap.to(line3.current, {
-        y: -6,
-        rotate: -45,
-        transformOrigin: "center",
-        duration: 0.3
-      });
-
-      menuOpen = true;
-    } else {
-      gsap.to([line1.current, line3.current], {
-        y: 0,
-        rotate: 0,
-        duration: 0.3
-      });
-
-      gsap.to(linerast2.current, {
-        opacity: 1,
-        duration: 0.2
-      });
-
-      menuOpen = false;
-    }
-  };
 
   return (
     <>
+    <div onClick={()=>{
+                setMenuOpen(true)
+          }} className="cursor-pointer"> 
       {/* MENU ICON */}
-      <div className="absolute z-50 right-65 top-[0.5vh] flex items-center justify-center">
+      
+
+      {/* HOVER COVER DIV */}
+      <div
+        className="absolute z-40 right-0 w-80 h-15 bg-white overflow-hidden"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+
+        <div  className="absolute z-50 right-65 top-[0.5vh] flex items-center justify-center">
         <svg
-          onClick={toggleMenu}
+          
           width="50"
           height="50"
           viewBox="0 0 24 24"
@@ -93,16 +72,12 @@ const NavMenu = () => {
         </svg>
       </div>
 
-      {/* HOVER COVER DIV */}
-      <div
-        className="absolute z-40 right-0 w-80 h-15 bg-white overflow-hidden"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
         <div
           ref={whiteDiv}
           className="absolute inset-0 bg-lime-200 will-change-transform"
         />
+      </div>
+
       </div>
     </>
   );

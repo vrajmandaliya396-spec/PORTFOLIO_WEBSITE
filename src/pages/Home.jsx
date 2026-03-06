@@ -1,19 +1,17 @@
-import React from "react";
 import Video from "../components/homePage/Video";
-import { Link } from "react-router-dom";
 import HomeHeroText from "../components/homePage/HomeHeroText";
 import HomeHeroBottomText from "../components/homePage/HomeHeroBottomText";
 import NavMenu from "../components/homePage/NavMenu";
 import NavMenuInnerContent from "../components/homePage/NavMenuInnerContent";
 
-const Home = () => {
+const Home = ({setMenuOpen}) => {
   return (
     <>
-      <div className=" overflow-hidden">
+      <div className="overflow-hidden">
         <NavMenuInnerContent></NavMenuInnerContent>
       </div>
       <div>
-        <NavMenu></NavMenu>
+        <NavMenu setMenuOpen={setMenuOpen}  ></NavMenu>
       </div>
       <div className="text-white fixed h-full w-full flex">
         <Video />
