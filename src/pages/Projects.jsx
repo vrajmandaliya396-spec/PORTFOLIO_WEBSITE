@@ -1,11 +1,11 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import NavMenuBlackTheem from "../components/projectsPage/NavMenuBlackTheem";
 import NavMenuInnerContent from "../components/homePage/NavMenuInnerContent";
 import ImgCard from "../components/projectsPage/ImgCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { Link } from "react-router-dom";
+
 
 const Projects = () => {
   const [menuOpen, setMenuOpen] = useState(false);
