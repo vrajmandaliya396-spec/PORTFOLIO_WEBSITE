@@ -1,11 +1,8 @@
-import { useRef} from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
-
-
-    
   const cursorRef = useRef(null);
 
   // Refs for each menu overlay
@@ -39,8 +36,8 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
   const handleMouseEnter = (ref) => {
     gsap.to(ref.current, {
       y: 0,
-      stagger:{
-        amount:0.3
+      stagger: {
+        amount: 0.3,
       },
       duration: 0.1,
       ease: "power2.out",
@@ -65,10 +62,10 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
       >
         <img
           src="src\assets\logo.png"
-          className="absolute z-9999 h-12 w-42 top-6 left-6 mx-auto"
+          className="relative z-9999 lg:h-12 lg:w-42 lg:top-4 lg:left-6  h-8 w-30 top-6 left-7"
           alt=""
         />
-        <div className="absolute z-1002 right-0 ">
+        <div className="absolute z-1002 lg:right-0 right-0 top-0  ">
           <svg
             onClick={() => {
               setMenuOpen(false);
@@ -89,17 +86,17 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
         </div>
 
         {/* ================= FULL SCREEN MENU ================= */}
-        <div className="absolute items-center justify-center inset-0 flex flex-col uppercase text-8xl text-white  bg-black z-1000">
+        <div className="absolute items-center lg:gap-0 gap-15 justify-center inset-0 flex flex-col uppercase text-8xl text-white  bg-black z-1000">
           {/* ============ PROJECT ============ */}
           <div
             onMouseEnter={() => handleMouseEnter(projectRef)}
             onMouseLeave={() => handleMouseLeave(projectRef)}
-            className="relative w-full py-12 border-t-2  border-white/30 flex justify-center overflow-hidden cursor-pointer"
+            className="relative w-full py-12 border-t-2 border-b-2 border-white/30 flex justify-center overflow-hidden cursor-pointer"
           >
-            {/* Base Text */}
-            <span className="relative z-10">Project</span>
+            <span className="relative text-5xl lg:text-9xl z-10 lg:leading-37 leading-15">
+              Project
+            </span>
 
-            {/* Lime Slide Overlay */}
             <div
               ref={projectRef}
               className="absolute inset-0 bg-lime-200 -translate-y-full"
@@ -110,9 +107,11 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
           <div
             onMouseEnter={() => handleMouseEnter(agenceRef)}
             onMouseLeave={() => handleMouseLeave(agenceRef)}
-            className="relative w-full py-12 border-t-2 border-white/30 flex justify-center overflow-hidden cursor-pointer"
+            className="relative w-full py-12 border-t-2 border-b-2 border-white/30 flex justify-center overflow-hidden cursor-pointer"
           >
-            <span className="relative z-10">Agence</span>
+            <span className="relative text-5xl lg:text-9xl z-10 lg:leading-37 leading-15">
+              Agence
+            </span>
 
             <div
               ref={agenceRef}
@@ -126,7 +125,9 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
             onMouseLeave={() => handleMouseLeave(contactRef)}
             className="relative w-full py-12 border-t-2 border-b-2 border-white/30 flex justify-center overflow-hidden cursor-pointer"
           >
-            <span className="relative z-10">Contact</span>
+            <span className="relative text-5xl lg:text-9xl z-10 lg:leading-37 leading-15">
+              Contact
+            </span>
 
             <div
               ref={contactRef}

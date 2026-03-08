@@ -48,12 +48,12 @@ const NavMenu = ({setMenuOpen}) => {
 
       {/* HOVER COVER DIV */}
       <div
-        className="absolute z-40 right-0 w-80 h-15 bg-white overflow-hidden"
+        className="absolute z-40 right-0 lg:w-80 w-[28vh] lg:h-15 h-[9.5vh] bg-white overflow-hidden"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
 
-        <div  className="absolute z-50 right-65 top-[0.5vh] flex items-center justify-center">
+        <div  className="absolute z-50 lg:right-65 right-32 lg:top-[0.5vh] top-1.5 flex items-center justify-center">
         <svg
           
           width="50"

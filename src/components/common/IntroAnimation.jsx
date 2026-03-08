@@ -40,7 +40,7 @@ const Loader = (props) => {
       <h1 className="loader-text text-5xl">Welcome Vraj</h1>
     
     </div>
-    <div>{props.children}</div>
+    <div>{props.children}</div>``
 
 </>
     
