@@ -1,6 +1,3 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Path } from 'three'
 
 const HomeHeroBottomText = () => {
   return (
