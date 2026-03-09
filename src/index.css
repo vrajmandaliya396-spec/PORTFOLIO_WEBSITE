@@ -1,9 +1,4 @@
 @import "tailwindcss";
-* {
-  padding: 0px;
-  margin: 0px;
-}
-
 .merq-container {
   opacity: 0;
 }
@@ -18,14 +13,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-@keyframes merquery {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
+
 
 @font-face {
   font-family: font1;
@@ -36,28 +24,3 @@
   src: url(./fonts/Lausanne-500.woff2);
 }
 
-.project1 {
-  margin: 10px;
-  margin-right: 5px;
-
-}
-
-.project2 {
-  margin: 10px;
-  margin-left: 5px;
-}
-
-.projectsTitle {
-  margin-top: 250px;
-}
-
-.hero {
-  will-change: height;
-}
-
-.project1 img {
-  transition: all ease-in 250ms;
-}
-.project2 img {
-  transition: all ease-in 250ms;
-}
