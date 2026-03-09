@@ -37,10 +37,10 @@ const Loader = (props) => {
   return (
 <>
       <div ref={Loader} className="loader fixed top-0 left-0 w-full h-screen bg-black text-white flex items-center justify-center z-9999">
-      <h1 className="loader-text text-5xl">Welcome Vraj</h1>
+      <h1 className="loader-text lg:text-9xl text-6xl font-[font2] text-lime-200 ">Welcome</h1>
     
     </div>
-    <div>{props.children}</div>``
+    <div>{props.children}</div>
 
 </>
     

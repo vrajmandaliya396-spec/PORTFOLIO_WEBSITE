@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { redirect } from "react-router-dom";
 
 const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
   const cursorRef = useRef(null);
@@ -57,7 +58,7 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
   return (
     <>
       <div
-        className={`fixed z-99999 overflow-hidden inset-0 transition-transform duration-500 
+        className={`fixed z-99999 overflow-hidden inset-0 transition-transform duration-500
             ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <img
@@ -91,10 +92,11 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
           <div
             onMouseEnter={() => handleMouseEnter(projectRef)}
             onMouseLeave={() => handleMouseLeave(projectRef)}
-            className="relative w-full py-12 border-t-2 border-b-2 border-white/30 flex justify-center overflow-hidden cursor-pointer"
+            onClick={()=> {    window.location.href = "http://localhost:5173/"}}
+            className="relative w-full border-t-2 border-b-2 border-white/30 flex justify-center overflow-hidden cursor-pointer"
           >
             <span className="relative text-5xl lg:text-9xl z-10 lg:leading-37 leading-15">
-              Project
+              Home
             </span>
 
             <div
@@ -107,10 +109,11 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
           <div
             onMouseEnter={() => handleMouseEnter(agenceRef)}
             onMouseLeave={() => handleMouseLeave(agenceRef)}
-            className="relative w-full py-12 border-t-2 border-b-2 border-white/30 flex justify-center overflow-hidden cursor-pointer"
+            onClick={()=> {    window.location.href = "http://localhost:5173/projects"}}
+            className="relative w-full border-t-2 border-b-2 border-white/30 flex justify-center overflow-hidden cursor-pointer"
           >
             <span className="relative text-5xl lg:text-9xl z-10 lg:leading-37 leading-15">
-              Agence
+              Projects
             </span>
 
             <div
@@ -123,10 +126,13 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
           <div
             onMouseEnter={() => handleMouseEnter(contactRef)}
             onMouseLeave={() => handleMouseLeave(contactRef)}
-            className="relative w-full py-12 border-t-2 border-b-2 border-white/30 flex justify-center overflow-hidden cursor-pointer"
+            onClick={()=> {    window.location.href = "http://localhost:5173/agence"}}
+
+            className="relative w-full border-t-2 border-b-2 border-white/30 flex justify-center overflow-hidden cursor-pointer"
+
           >
             <span className="relative text-5xl lg:text-9xl z-10 lg:leading-37 leading-15">
-              Contact
+              Agence
             </span>
 
             <div
