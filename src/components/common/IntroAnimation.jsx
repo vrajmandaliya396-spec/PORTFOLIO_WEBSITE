@@ -1,9 +1,11 @@
-import { useEffect, useRef } from "react";
+import {  useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useLocation } from "react-router-dom";
 
 const Loader = (props) => {
 
+  const currentpath = useLocation().pathname
 
         console.log(props.children);
               
@@ -31,7 +33,7 @@ const Loader = (props) => {
     });
     
 
-  }, []);
+  }, [currentpath]);
 
 
   return (

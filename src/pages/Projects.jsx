@@ -45,7 +45,7 @@ const Projects = () => {
     <div className='lg:p-4 p-2 mb-50'>
 
       <img
-        src="src\assets\logo2.png"
+        src="public\logo2.png"
         className="relative lg:h-12 lg:w-42 lg:top-0 lg:left-0  h-8 w-30 top-6 left-7"
         alt=""
       />

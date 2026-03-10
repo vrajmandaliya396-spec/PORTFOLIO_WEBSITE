@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
   const cursorRef = useRef(null);
@@ -62,7 +62,7 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
             ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <img
-          src="src\assets\logo.png"
+          src="public\logo.png"
           className="relative z-9999 lg:h-12 lg:w-42 lg:top-4 lg:left-6  h-8 w-30 top-6 left-7"
           alt=""
         />
@@ -92,11 +92,11 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
           <div
             onMouseEnter={() => handleMouseEnter(projectRef)}
             onMouseLeave={() => handleMouseLeave(projectRef)}
-            onClick={()=> {    window.location.href = "http://localhost:5173/"}}
+            // onClick={()=> {    window.location.href = "http://localhost:5173/"}}
             className="relative w-full border-t-2 border-b-2 border-white/30 flex justify-center overflow-hidden cursor-pointer"
           >
             <span className="relative text-5xl lg:text-9xl z-10 lg:leading-37 leading-15">
-              Home
+              <Link to="/">Home</Link>
             </span>
 
             <div
@@ -109,11 +109,11 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
           <div
             onMouseEnter={() => handleMouseEnter(agenceRef)}
             onMouseLeave={() => handleMouseLeave(agenceRef)}
-            onClick={()=> {    window.location.href = "http://localhost:5173/projects"}}
+            // onClick={()=> {    window.location.href = "http://localhost:5173/projects"}}
             className="relative w-full border-t-2 border-b-2 border-white/30 flex justify-center overflow-hidden cursor-pointer"
           >
             <span className="relative text-5xl lg:text-9xl z-10 lg:leading-37 leading-15">
-              Projects
+              <Link to="/projects">Projects</Link>
             </span>
 
             <div
@@ -126,13 +126,13 @@ const NavMenuInnerContent = ({ menuOpen, setMenuOpen }) => {
           <div
             onMouseEnter={() => handleMouseEnter(contactRef)}
             onMouseLeave={() => handleMouseLeave(contactRef)}
-            onClick={()=> {    window.location.href = "http://localhost:5173/agence"}}
+            // onClick={()=> {   }}
 
             className="relative w-full border-t-2 border-b-2 border-white/30 flex justify-center overflow-hidden cursor-pointer"
 
           >
             <span className="relative text-5xl lg:text-9xl z-10 lg:leading-37 leading-15">
-              Agence
+              <Link to="/agence">Agence</Link>
             </span>
 
             <div

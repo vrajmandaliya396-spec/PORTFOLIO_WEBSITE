@@ -13,7 +13,7 @@ const Agence = () => {
   return (
     <div className='overflow-hidden '>
       <img
-        src="src\assets\logo2.png"
+        src="public\logo2.png"
         className="relative lg:h-12 z-50 lg:w-42 lg:top-4 lg:left-6  h-8 w-30 top-6 left-7"
         alt=""
       />

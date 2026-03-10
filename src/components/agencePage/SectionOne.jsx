@@ -5,9 +5,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const MiddelText = () => {
   const ImgAarray = [
-    "src/assets/img.png",
-    "src/assets/img2.png",
-    "src/assets/img3.png",
+    "public/img.png",
+    "public/img2.png",
+    "public/img3.png",
   ];
 
   const ImgDivRef = useRef(null);
@@ -52,7 +52,7 @@ const MiddelText = () => {
             <img
               ref={ImgRef}
               className="lg:h-85  z-0 w-60 flex lg:top-10  rounded-4xl"
-              src="src/assets/img.png"
+              src="public/img.png"
               alt=""
             />
           </div>
