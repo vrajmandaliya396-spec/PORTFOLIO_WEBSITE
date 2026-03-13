@@ -43,10 +43,7 @@ const NavMenu = ({setMenuOpen}) => {
     <div onClick={()=>{
                 setMenuOpen(true)
           }} className="cursor-pointer"> 
-      {/* MENU ICON */}
-      
-
-      {/* HOVER COVER DIV */}
+    
       <div
         className="absolute z-2 right-0 lg:w-80 top-0 w-[28vh] lg:h-15 h-[9.5vh] bg-black overflow-hidden"
         onMouseEnter={handleMouseEnter}

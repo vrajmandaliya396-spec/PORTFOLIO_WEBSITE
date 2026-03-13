@@ -5,12 +5,10 @@ const SectionTwo = () => {
     <div className='w-screen bg-black'>
       <div className="w-full h-full bg-black text-white py-16 flex flex-col items-center justify-center gap-10">
 
-        {/* Heading */}
         <h2 className="text-3xl lg:text-4xl font-semibold tracking-wide">
           Let's Connect
         </h2>
 
-        {/* Social Buttons */}
         <div className="grid grid-cols-2 gap-5 px-6 w-full max-w-md 
                         lg:flex  lg:justify-center lg:gap-6">
 

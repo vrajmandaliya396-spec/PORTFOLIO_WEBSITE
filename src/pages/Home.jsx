@@ -16,9 +16,7 @@ const Home = () => {
       <div>
         <NavMenu setMenuOpen={setMenuOpen}></NavMenu>
       </div>
-      {/* <div className="hidden">
-        <NavMenuBlackTheem setMenuOpen={setMenuOpen}></NavMenuBlackTheem>
-      </div> */}
+      
       <div className="text-white fixed w-full flex">
         <Video />
       </div>

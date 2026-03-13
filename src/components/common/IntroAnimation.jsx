@@ -29,7 +29,7 @@ const Loader = (props) => {
       ease: "power4.inOut"
     })
     .set(".loader", {
-      display: "none"   // 👈 removes it visually
+      display: "none"   
     });
     
 

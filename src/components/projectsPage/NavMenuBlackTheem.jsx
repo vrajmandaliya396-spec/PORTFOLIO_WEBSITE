@@ -43,10 +43,7 @@ const NavMenuBlackTheem = ({setMenuOpen}) => {
     <div onClick={()=>{
                 setMenuOpen(true)
           }} className="cursor-pointer right-0 "> 
-      {/* MENU ICON */}
       
-
-      {/* HOVER COVER DIV */}
       <div
         className="absolute z-40  w-80 h-15 bg-black"
         onMouseEnter={handleMouseEnter}
